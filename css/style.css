@@ -1,0 +1,406 @@
+
+/* ========================================
+   1. CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f1e9;
+    color: #3d3028;
+    line-height: 1.5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   2. CABEÇALHO
+======================================== */
+
+header {
+    background-color: #6b422e;
+    color: #ffffff;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#identidade_site h1,
+header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+#identidade_site p,
+header p {
+    font-size: 18px;
+    color: #f0e5dc;
+}
+
+#botao_modo_escuro {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#botao_modo_escuro:hover {
+    background-color: #ffffff;
+    color: #6b422e;
+}
+
+
+/* ========================================
+   3. ORGANIZAÇÃO PRINCIPAL
+======================================== */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px 40px;
+    align-items: start;
+}
+
+
+/* ========================================
+   4. PAINEL DE TAREFAS
+======================================== */
+
+#painel_tarefas {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#painel_tarefas h2 {
+    grid-column: 1 / -1;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+#painel_tarefas div {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    transition: 0.3s;
+}
+
+#painel_tarefas div:hover {
+    transform: translateY(-3px);
+}
+
+#painel_tarefas h3 {
+    font-size: 32px;
+    color: #8b5638;
+    margin-bottom: 8px;
+}
+
+#painel_tarefas p {
+    font-size: 14px;
+    color: #777777;
+}
+
+
+/* ========================================
+   5. CADASTRO DE TAREFAS
+======================================== */
+
+#cadastro_tarefas h2,
+#listagem_tarefas h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#form-tarefa {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+#form-tarefa div {
+    margin-bottom: 18px;
+}
+
+#form-tarefa label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#form-tarefa input,
+#form-tarefa textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6c9bd;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #3d3028;
+    outline: none;
+    transition: 0.3s;
+}
+
+#form-tarefa input:focus,
+#form-tarefa textarea:focus {
+    border-color: #8b5638;
+    box-shadow: 0 0 0 3px rgba(139, 86, 56, 0.12);
+}
+
+#form-tarefa textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#form-tarefa button {
+    background-color: #6b422e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#form-tarefa button:hover {
+    background-color: #8b5638;
+}
+
+
+/* ========================================
+   6. FILTROS DE TAREFAS
+======================================== */
+
+#filtros_tarefas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#filtros_tarefas button {
+    background-color: #ffffff;
+    color: #6b422e;
+    border: 1px solid #d6c9bd;
+    padding: 9px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#filtros_tarefas button:hover {
+    background-color: #6b422e;
+    color: #ffffff;
+    border-color: #6b422e;
+}
+
+
+/* ========================================
+   7. LISTAGEM DE TAREFAS
+======================================== */
+
+#lista_tarefas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lista_tarefas li {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    overflow-wrap: anywhere;
+}
+
+#lista_tarefas li h3 {
+    color: #6b422e;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#lista_tarefas li p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#lista_tarefas li label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#lista_tarefas li select {
+    padding: 8px 10px;
+    border: 1px solid #d6c9bd;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #3d3028;
+}
+
+
+/* ========================================
+   8. BOTÕES DE EDITAR E EXCLUIR
+======================================== */
+
+#lista_tarefas li button {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    margin: 8px 8px 0 0;
+    transition: 0.3s;
+}
+
+#lista_tarefas li button:first-of-type {
+    background-color: #e9d7c9;
+    color: #6b422e;
+}
+
+#lista_tarefas li button:first-of-type:hover {
+    background-color: #d8bba5;
+}
+
+#lista_tarefas li button:last-of-type {
+    background-color: #f5dddd;
+    color: #a52a2a;
+}
+
+#lista_tarefas li button:last-of-type:hover {
+    background-color: #eac1c1;
+}
+
+
+/* ========================================
+   9. MENSAGENS DA LISTA
+======================================== */
+
+#lista_tarefas li:only-child {
+    text-align: center;
+}
+
+#lista_tarefas li:only-child:not(:has(h3)) {
+    color: #777777;
+}
+
+
+/* ========================================
+   10. MODO ESCURO
+======================================== */
+
+body.modo_escuro {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.modo_escuro header {
+    background-color: rgb(58, 57, 57);
+}
+
+body.modo_escuro #painel_tarefas div,
+body.modo_escuro #form-tarefa,
+body.modo_escuro #lista_tarefas li {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.modo_escuro #painel_tarefas h3,
+body.modo_escuro #lista_tarefas li h3 {
+    color: #d6a27f;
+}
+
+body.modo_escuro #painel_tarefas p,
+body.modo_escuro #lista_tarefas li p {
+    color: #cccccc;
+}
+
+body.modo_escuro #form-tarefa label,
+body.modo_escuro #cadastro_tarefas h2,
+body.modo_escuro #listagem_tarefas h2,
+body.modo_escuro #painel_tarefas h2 {
+    color: #f1f1f1;
+}
+
+body.modo_escuro #form-tarefa input,
+body.modo_escuro #form-tarefa textarea,
+body.modo_escuro #lista_tarefas li select {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: #666666;
+}
+
+body.modo_escuro #filtros_tarefas button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: #666666;
+}
+
+body.modo_escuro #filtros_tarefas button:hover {
+    background-color: #6b422e;
+}
+
+body.modo_escuro #lista_tarefas li button:first-of-type {
+    background-color: #574334;
+    color: #ffffff;
+}
+
+body.modo_escuro #lista_tarefas li button:last-of-type {
+    background-color: #633737;
+    color: #ffffff;
+}
+
+/* ========================================
+   10. Feedback
+======================================== */
+
+#mensagem_feedback {
+    display: none;
+    padding: 12px 16px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#mensagem_feedback.sucesso {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#mensagem_feedback.erro {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

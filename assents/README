@@ -1,0 +1,29 @@
+## Organizaê - Gerenciador de Tarefas
+
+## Sobre o projeto
+O Organizaê é uma aplicação web desenvolvida para organizar e gerenciar tarefas do dia a dia.
+
+## Funcionalidades
+- Cadastrar tarefas.
+- Listar tarefas.
+- Editar tarefas.
+- Excluir tarefas.
+- Concluir tarefas.
+- Filtrar tarefas por status.
+- Exibir contadores.
+- Salvar dados no navegador com localStorage.
+- Alternar entre modo claro e escuro.
+
+## Tecnologias utilizadas
+- HTML5
+- CSS3
+- JavaScript
+- localStorage
+
+## Como executar
+1. Baixe ou clone o repositório.
+2. Abra a pasta do projeto.
+3. Execute o arquivo index.html no navegador.
+
+## Autor
+José Davi

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Organizaê</title>
+</head>
+<body>
+    <!-- Cabeçalho da aplicação -->
+    <header>
+        <div id="identidade_site">
+            <h1>Organizaê</h1>
+            <p>Organize, acompanhe e conclua suas atividades diárias com clareza.</p>
+        </div>
+
+        <button type="button" id="botao_modo_escuro">  🌙  Modo Escuro</button>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div id="mensagem_feedback" role="status" aria-live="polite"></div>
+        <!-- Painel de tarefas -->
+        <section id="painel_tarefas">
+            <h2>Painel das Tarefas</h2>
+
+            <div>
+                <h3 id="tarefas_totais">0</h3>
+                <p>Total de Tarefas</p>
+            </div>
+
+            <div>
+                <h3 id="tarefas_pendentes">0</h3>
+                <p>Pendentes</p>
+            </div>
+
+            <div>
+                <h3 id="tarefas_progresso">0</h3>
+                <p>Em Progresso</p>
+            </div>
+
+            <div>
+                <h3 id="tarefas_concluidas">0</h3>
+                <p>Concluídas</p>
+            </div>
+        </section>
+
+        <!-- Cadastro de tarefas -->
+        <section id="cadastro_tarefas">
+            <h2>Cadastrar Nova Tarefa</h2>
+
+            <form id="form-tarefa">
+
+                <div>
+                    <label for="titulo">Título da tarefa</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        name="titulo"
+                        placeholder="Ex: Preparar pedidos"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="descricao">Descrição</label>
+                    <textarea
+                        id="descricao"
+                        name="descricao"
+                        placeholder="Descreva a tarefa"
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label for="data">Data da tarefa</label>
+                    <input
+                        type="date"
+                        id="data"
+                        name="data"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Adicionar tarefa</button>
+
+            </form>
+        </section>
+
+        <!-- Listagem de tarefas -->
+        <section id="listagem_tarefas">
+            <h2>Lista de Tarefas</h2>
+
+            <!-- Filtros -->
+            <div id="filtros_tarefas">
+                <button type="button">Todas</button>
+                <button type="button">Pendentes</button>
+                <button type="button">Em progresso</button>
+                <button type="button">Concluídas</button>
+            </div>
+
+            <!-- Lista onde as tarefas serão exibidas -->
+            <ul id="lista_tarefas"></ul>
+
+        </section>
+
+    </main>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</body
+</html>
